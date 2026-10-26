@@ -1,17 +1,23 @@
 {
   "name": "miniprojeto_ecommerce_brunobahr_t5",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "private": true,
+  "description": "Bruno's Worlds — miniprojeto de e-commerce em TypeScript para a turma T5.",
   "type": "commonjs",
+  "main": "dist/main.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/main.js",
+    "test": "npm run build && node --test dist/testes.js",
+    "experimento": "npm run build && node dist/experimentos/compararCupons.js",
+    "etapa:cadastros": "npm run build && node dist/etapas/01-cadastros.js",
+    "etapa:cupom100": "npm run build && node dist/etapas/02-cupom100.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
   "devDependencies": {
-    "@types/node": "^26.6.5",
-    "typescript": "^7.0.2"
+    "@types/node": "^24.0.0",
+    "typescript": "~7.0.2"
   }
 }
